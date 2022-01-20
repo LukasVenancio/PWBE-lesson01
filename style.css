@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+form{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+textarea{
+    resize: none;
+    width: 500px;
+}
+.buttonSave{
+    width: 100px;
+}
+.buttonClear{
+    width: 100px;
+}

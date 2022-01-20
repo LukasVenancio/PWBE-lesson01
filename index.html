@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 01 - Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form name="formSingUp" method="GET" action="index.html">
+       <div class="firstLine"> Name: <input type="text" name="txtName" size="50" maxlength="30">
+        City:
+        <select name="sltCities" id="">
+            <option value="" selected>Choose an item</option>
+            <option value="jandira">Jandira</option>
+            <option value="barueri">Barueri</option>
+            <option value="itapevi">Itapevi</option>
+            <option value="carapicuia">Carapicuíba</option>
+            <option value="osasco">Osasco</option>
+        </select>
+        </div>
+        <div class="genre">Genre:
+            <input type="radio" name="rdoGenre" value="f"> Female
+            <input type="radio" name="rdoGenre" value="m"> Male
+            <input type="radio" name="rdoGenre" value="o" checked> Other
+        </div>
+       <div class="languages"> 
+           Language:
+            <input type="checkbox" name="chkPortuguese" value="pt"> Portuguese
+            <input type="checkbox" name="chkEnglish" value="en"> English
+            <input type="checkbox" name="chkSpanish" value="es"> Espanish
+        </div>
+
+        Note:
+        <textarea name="txtNote" cols="20" rows="5"></textarea>
+
+        <div class="buttons">
+            <input type="submit" class="buttonSave" name="btnSave" value="Save">
+            <input type="reset" class="buttonClear" name="btnClear" value="Clear">
+        </div>
+    </form>
+</body>
+</html>
