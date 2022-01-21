@@ -1,3 +1,36 @@
+<?php
+    //echo('Hello!');
+
+if(isset($_GET['btnSave'])){
+
+    $name = $_GET['txtName'];
+    $city = $_GET['sltCities'];
+    $genre = $_GET['rdoGenre'];
+    $note = $_GET['txtNote'];
+    $pt = null;
+    $en = null;
+    $es = null;
+
+    if(isset($_GET['chkPortuguese'])){
+        $pt = $_GET['chkPortuguese'];
+    }
+    if(isset($_GET['chkEnglish'])){
+        $en = $_GET['chkEnglish'];
+    }
+    if(isset($_GET['chkSpanish'])){
+        $es = $_GET['chkSpanish'];
+    }
+
+    echo('<b>Name: </b>'. $name . '<br>');
+    echo('<b>City: </b>'. $city . '<br>');
+    echo('<b>Genre: </b>'. $genre . '<br>');
+    echo('<b>Note: </b>'. $note . '<br>');
+    echo('<b>Languages: </b>' . $pt . ' ' . $en . ' ' . $es);
+
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,8 +40,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form name="formSingUp" method="GET" action="index.html">
-       <div class="firstLine"> Name: <input type="text" name="txtName" size="50" maxlength="30">
+    <form name="formSingUp" method="GET" action="index.php">
+       <div class="firstLine"> 
+           Name: <input type="text" name="txtName" size="50" maxlength="30">
         City:
         <select name="sltCities" id="">
             <option value="" selected>Choose an item</option>
@@ -26,9 +60,9 @@
         </div>
        <div class="languages"> 
            Language:
-            <input type="checkbox" name="chkPortuguese" value="pt"> Portuguese
-            <input type="checkbox" name="chkEnglish" value="en"> English
-            <input type="checkbox" name="chkSpanish" value="es"> Espanish
+            <input type="checkbox" name="chkPortuguese" value="PT"> Portuguese
+            <input type="checkbox" name="chkEnglish" value="EN"> English
+            <input type="checkbox" name="chkSpanish" value="ES"> Spanish
         </div>
 
         Note:
